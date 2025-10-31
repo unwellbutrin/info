@@ -34,6 +34,24 @@
       50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
     }
 
+
+@media (max-width: 768px) {
+  .floating-letter {
+    font-size: 1.5rem;          /* smaller so they fit on screen */
+    opacity: 0.4;               /* softer so they don’t crowd text */
+  }
+
+  .floating-elements {
+    position: absolute;         /* allows scrolling instead of fixed clipping */
+  }
+
+  .bg-animation {
+    position: absolute;         /* same reason */
+  }
+}
+
+    
+
     .bg-animation {
       position: fixed;
       top: 0;

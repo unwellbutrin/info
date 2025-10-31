@@ -35,20 +35,21 @@
     }
 
 
+/* --- mobile floating DNA on top --- */
 @media (max-width: 768px) {
-  .floating-letter {
-    font-size: 1.5rem;          /* smaller so they fit on screen */
-    opacity: 0.4;               /* softer so they don’t crowd text */
-  }
-
   .floating-elements {
-    position: absolute;         /* allows scrolling instead of fixed clipping */
+    position: fixed;
+    z-index: 999;           /* bring letters above everything else */
+    pointer-events: none;   /* ensures they don’t block button taps */
   }
 
-  .bg-animation {
-    position: absolute;         /* same reason */
+  .floating-letter {
+    font-size: 1.8rem;      /* slightly smaller for readability */
+    opacity: 0.25;          /* subtle transparency */
+    mix-blend-mode: screen; /* soft glow effect over background */
   }
 }
+
 
     
 
